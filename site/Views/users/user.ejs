@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./../partials/head.ejs") %>
+
+    <link rel="stylesheet" href="/css/forms.css" />
+
+<body>
+  <%- include ("./../partials/header.ejs") %>
+    <main class="main-container">
+      <div class="title">
+        <h1>Información Personal</h1>
+      </div>
+      <section class="information-container">
+        <div class="information">
+          <p>Nombre: <%= oneUser.name %></p>
+          <p>Apellido: <%= oneUser.surname %></p>
+          <p>Calle y n°: <%= oneUser.street %></p>
+          <p>Piso y depto: <%= oneUser.floorLevel %></p>
+          <p>Entre calles: <%= oneUser.betweenStreet %></p>
+          <p>Localidad: <%= oneUser.locality %></p>
+          <p>CP: <%= oneUser.cp %></p>
+          <p>Fecha de nacimiento: <%= oneUser.birthday %></p>
+          <img src="<%=oneUser.picture %>"/>
+        </div>
+        <div class="modificar-datos">
+          <button><a href="/users/userProfile">Modificar perfil </a></button>
+        </div>
+      </section>
+      <div class="gif-fruit">
+        <img src="/img/gif-1.gif" alt="gif1">
+        <img src="/img/gif-2.gif" alt="gif2">
+        <img src="/img/gif-4.gif" alt="gif4">
+        <img src="/img/gif-3.gif" alt="gif3">
+        <img src="/img/gif-5.gif" alt="gif5">
+      </div>
+      <section class="pedidos">
+        <div class="ultimos-pedidos">
+          <h2 class="log-title ">Últimos pedidos:</h2>
+        </div>
+        <div class="categorias">
+          <p class="p">Fecha del pedido:</p>
+          <p class="p">Cantidad de productos:</p>
+          <p class="p">Total pedido:</p>
+          <p class="p">Forma de pago:</p>
+        </div>
+      </section>
+    </main>
+    <%- include("./../partials/footer.ejs") %>
+</body>
+
+</html>
